@@ -3,7 +3,8 @@
   pointer-events: none;
 }
 
-.validation-enabled input:invalid {
+.validation-enabled input:invalid,
+.validation-enabled textarea:invalid{
   border: 2px solid rgba(206, 23, 23, 0.726);
 }
 
@@ -15,6 +16,7 @@
   background-color: rgba(206, 23, 23, 0.342);
 }
 
-.validation-enabled input:invalid+.error {
+.validation-enabled input:invalid + .error,
+.validation-enabled textarea:invalid + .error{
   display: block;
 }
