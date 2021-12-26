@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Validation</title>
+  <script src="./dist/app.bundle.js" defer></script>
+</head>
+
+<body>
+  <form novalidate class="form" id="form" action="" style="width: 500px;">
+    <div>
+      <input type="text" name="firstname" id="firstName" placeholder="Имя" required minlength="2" maxlength="20">
+      <div class="error">Заполните поле, количество символов 2-20</div>
+    </div>
+    <br>
+    <div>
+      <input type="text" name="lastname" id="LastName" placeholder="Фамилия" minlength="2" maxlength="20">
+      <div class="error">Количество символов 2-20</div>
+    </div>
+    <br>
+    <div>
+      <input type="email" name="email" id="email" placeholder="Email" required minlength="7" maxlength="20">
+      <div class="error">Заполните поле, количество символов 7-20</div>
+    </div>
+    <br>
+    <div>
+      <input type="number" name="phone" id="phone" placeholder="Номер телефона">
+      <div class="error">Количество символов 2-20</div>
+    </div>
+    <br>
+    <div>
+      <textarea name="address" id="address" placeholder="Адрес" min="5" max="50"></textarea>
+      <div class="error">Количество символов 5-50</div>
+    </div>
+    <br>
+    <div>
+      <p>Ваш пол</p>
+      <label><input type="radio" name="gender" required>женский
+      </label>
+      <label><input type="radio" name="gender" required>мужcкой
+        <div class="error">Выберете ваш пол</div>
+      </label>
+    </div>
+    <br>
+    <div>
+      <label>День рождения:
+        <input type="number" name="birthday" id="birthday" required min="1" max="31">
+        <div class="error">Заполните поле, количество символов 1-31</div>
+      </label>
+    </div>
+    <br>
+    <div>
+      <label>Месяц рождения:
+        <input type="number" name="monthBirth" id="monthBirth" required min="1" max="12">
+        <div class="error">Заполните поле, количество символов 1-12</div>
+      </label>
+    </div>
+    <br>
+    <div>
+      <label>Год рождения:
+        <input type="number" name="yearBirth" id="yearBirth" required min="1920" max="2021">
+        <div class="error">Заполните поле, год с 1920 по 2021</div>
+      </label>
+    </div>
+    <br>
+    <div>
+      <label>Принимаю условия соглашения:
+        <input type="checkbox" name="acceptAgreement" id="acceptAgreement" required>
+        <div class="error">Примите соглашение</div>
+      </label>
+    </div>
+    <button type="submit">Отправить</button>
+</body>
+
+</html>

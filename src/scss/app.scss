@@ -1,0 +1,20 @@
+.validation-enabled.form:invalid button[type="submit"] {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.validation-enabled input:invalid {
+  border: 2px solid rgba(206, 23, 23, 0.726);
+}
+
+.error {
+  display: none;
+  color: red;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  background-color: rgba(206, 23, 23, 0.342);
+}
+
+.validation-enabled input:invalid+.error {
+  display: block;
+}
